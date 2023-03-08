@@ -8,7 +8,7 @@ resource "aws_security_group" "sg" {
     from_port   = 3306
     to_port     = 3306
     protocol    = "tcp"
-    cidr_blocks = [var.vpc_cidr, var.BASTION_NODE]
+    cidr_blocks = [var.vpc_cidr, "0.0.0.0/0"]
   }
 
   egress {
